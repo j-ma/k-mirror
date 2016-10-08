@@ -9,19 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'k-mirror';
+var ArtistsComponent = (function () {
+    function ArtistsComponent() {
     }
-    AppComponent = __decorate([
+    ArtistsComponent = __decorate([
         core_1.Component({
-            selector: "my-app",
-            template: "\n    \t<h1>{{title}}</h1>\n    \t<nav>\n    \t\t<a routerLink=\"/recent\">Recent</a>\n     \t\t<a routerLink=\"/artists\">Artists</a>\n   \t\t</nav>\n   \t\t<router-outlet></router-outlet>\n  \t",
-            styleUrls: ['app/app.component.css']
+            selector: 'my-artists',
+            templateUrl: 'app/artists.component.html',
+            styleUrls: ['app/artists.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], ArtistsComponent);
+    return ArtistsComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ArtistsComponent = ArtistsComponent;
+//# sourceMappingURL=artists.component.js.map

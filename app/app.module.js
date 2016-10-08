@@ -10,15 +10,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
+var recent_component_1 = require('./recent.component');
+var artists_component_1 = require('./artists.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+            imports: [
+                platform_browser_1.BrowserModule,
+                router_1.RouterModule.forRoot([
+                    {
+                        path: 'artists',
+                        component: artists_component_1.ArtistsComponent
+                    },
+                    {
+                        path: 'recent',
+                        component: recent_component_1.RecentComponent
+                    }
+                ])
+            ],
+            declarations: [
+                app_component_1.AppComponent,
+                recent_component_1.RecentComponent,
+                artists_component_1.ArtistsComponent
+            ],
+            bootstrap: [
+                app_component_1.AppComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
