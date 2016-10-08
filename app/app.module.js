@@ -14,6 +14,7 @@ var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var recent_component_1 = require('./recent.component');
 var artists_component_1 = require('./artists.component');
+var video_service_1 = require('./video.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -29,6 +30,11 @@ var AppModule = (function () {
                     {
                         path: 'recent',
                         component: recent_component_1.RecentComponent
+                    },
+                    {
+                        path: '',
+                        redirectTo: '/recent',
+                        pathMatch: 'full'
                     }
                 ])
             ],
@@ -39,6 +45,9 @@ var AppModule = (function () {
             ],
             bootstrap: [
                 app_component_1.AppComponent
+            ],
+            providers: [
+                video_service_1.VideoService
             ]
         }), 
         __metadata('design:paramtypes', [])

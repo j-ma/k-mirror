@@ -5,6 +5,7 @@ import { RouterModule }   from '@angular/router';
 import { AppComponent }   from './app.component';
 import { RecentComponent }   from './recent.component';
 import { ArtistsComponent }   from './artists.component';
+import { VideoService } from './video.service';
 
 @NgModule({
   imports: [
@@ -17,6 +18,11 @@ import { ArtistsComponent }   from './artists.component';
 	  {
 	    path: 'recent',
 	    component: RecentComponent
+	  },
+	  {
+  		path: '',
+  		redirectTo: '/recent',
+  		pathMatch: 'full'
 	  }
 	])
   ],
@@ -27,6 +33,9 @@ import { ArtistsComponent }   from './artists.component';
   ],
   bootstrap: [
   	AppComponent
+  ],
+  providers: [
+  	VideoService
   ]
 })
 

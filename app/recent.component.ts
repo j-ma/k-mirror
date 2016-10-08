@@ -1,4 +1,6 @@
 import { Component,OnInit } from '@angular/core';
+import { Video } from './video'
+import { VideoService } from './video.service';
 
 @Component({
     selector: 'my-recent',
@@ -6,5 +8,16 @@ import { Component,OnInit } from '@angular/core';
   	styleUrls: ['app/recent.component.css']
 })
 
-export class RecentComponent{
+export class RecentComponent implements OnInit{
+
+	videos: Video[];
+	constructor(private videoService: VideoService) { }
+
+  	getVideos(): void {
+    	this.videoService.getVideos().then(videos => this.videos = videos);
+  	}
+
+  	ngOnInit(): void {
+    	this.getVideos();
+  	}
 }
