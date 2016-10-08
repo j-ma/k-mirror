@@ -1,0 +1,4 @@
+/node_modules
+/typings
+/elasticsearch-2.4.0
+.DS_Store
